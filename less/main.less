@@ -1,11 +1,9 @@
 @import "variables.less";
 @import "mixins.less";
-@import "components.less";
+@import "reset.less";
 
 html, body {
   width: 100%;
-  padding: 0;
-  margin: 0;
   font-family: 'Lato';
 }
 
@@ -13,7 +11,6 @@ nav {
   width: 100%;
   height: 120px;
   padding: 38px 20px;
-  box-sizing: border-box;
 
   .wrapper {
     max-width: 931px;
@@ -39,12 +36,11 @@ nav {
       height: 44px;
       padding: 10px 0;
       margin-left: 30px;
-      box-sizing: border-box;
 
       a {
         font-size: 14px;
         font-weight: 700;
-        color: @nav-text;
+        color: @main-gray-color;
         text-transform: uppercase;
       }
 
@@ -57,7 +53,7 @@ nav {
 
 header {
   width: 100%;
-  background: url('../images/header-background.png'), url('../images/layer-1.png'),  url('../images/layer-2.png');
+  background: url('../images/layer-2.png'), url('../images/layer-1.png'), url('../images/header-background.png');
   background-blend-mode: luminosity;
   background-repeat: no-repeat;
   background-size: cover;
@@ -65,39 +61,39 @@ header {
 
   .wrapper {
     padding: 258px 20px;
+  }
 
-    .header {
-      margin-bottom: 25px;
-      font-size: 40px;
-      font-weight: 900;
+  .header {
+    margin-bottom: 25px;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: @main-yellow-color;
+  }
+
+  .subheader {
+    font-size: 20px;
+    color: #fff;
+  }
+  .info {
+    margin-top: 125px;
+    margin-bottom: 25px;
+    a {
+      font-size: 22px;
       text-transform: uppercase;
-      color: @main-color;
-    }
-
-    .subheader {
-      font-size: 20px;
       color: #fff;
     }
-    .info {
-      margin-top: 125px;
-      margin-bottom: 25px;
-      a {
-        font-size: 22px;
-        text-transform: uppercase;
-        color: #fff;
-      }
-    }
+  }
 
-    .line {
-      width: 194px;
-      height: 4px;
-      margin: 0 auto;
-      background: @border-color;
-    }
+  .line {
+    width: 194px;
+    height: 4px;
+    margin: 0 auto;
+    background: @border-color;
   }
 }
 
-section {
+.section-info {
   width: 100%;
   min-height: 403px;
   background: @border-color;
@@ -106,7 +102,7 @@ section {
   .wrapper {
     padding: 20px;
 
-    .section-logo {
+    .section-info-logo {
       height: 44px;
       margin-top: 88px;
       margin-bottom: 50px;
@@ -117,12 +113,31 @@ section {
       }
     }
 
-    .section-text {
+    .section-info-text {
       max-width: 685px;
       margin: 0 auto;
       font-size: 22px;
       line-height: 30px;
       color: #fff;
     }
+  }
+}
+
+.what-love {
+  width: 100%;
+  padding: 160px 20px;
+
+  .wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  .header-template();
+
+  .list {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
   }
 }
