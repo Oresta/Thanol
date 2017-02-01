@@ -1,0 +1,17 @@
+mixin what-love-list-item(header, text, faIcon)
+  .list-item
+    .list-item-img
+      img(src="images/icon-background-big.png")
+      i(class=faIcon)
+    .list-item-text
+      .list-item-header=header
+      .list-item-info=text
+
+mixin what-love-list-item-left(header, text, faIcon)
+  .list-item.left
+    .list-item-text
+      .list-item-header=header
+      .list-item-info=text
+    .list-item-img
+      img(src="images/icon-background-big.png")
+      i(class=faIcon)

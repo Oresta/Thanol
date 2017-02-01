@@ -4,8 +4,10 @@ html(lang='en')
     meta(charset='utf-8')
     link(rel="stylesheet", href="css/main.min.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,800,900%22")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     title Thanol
   body
+    include mixins.jade
     nav
       .wrapper
         .logo
@@ -41,6 +43,11 @@ html(lang='en')
           img.logo-background(src="images/icon-background-small.png")
           img.logo-icon(src="images/icon-logo-small.png")
         .list
-          
+          +what-love-list-item-left("Brand Identity", "aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.", "fa fa-video-camera")
+          +what-love-list-item("UI/UX Design", "aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.", "fa fa-lightbulb-o")
+          +what-love-list-item-left("Graphic Design", "aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.", "fa fa-flag-checkered")
+          +what-love-list-item("Mobile Application", "aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.", "fa fa-file-code-o")
+          +what-love-list-item-left("Illustration", "aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.", "fa fa-picture-o")
+          +what-love-list-item("Videography", "aliquam ipsum ante morbi sed ipsum mollis. Sollicitudin viverra, vel varius eget sit mollis.", "fa fa-video-camera")
 
     script(src="/js/libs.js")
